@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Samriddhi ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background: linear-gradient(135deg, #fde2e4, #fadadd);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #3a3a3a;
+}
+
+.container {
+  max-width: 760px;
+  background: rgba(255,255,255,0.95);
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  text-align: center;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 2.3em;
+}
+
+p {
+  line-height: 1.7;
+  font-size: 1.05em;
+}
+
+.photo {
+  width: 190px;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 24px auto;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+  border: 4px solid #fff;
+}
+
+.timeline {
+  margin-top: 40px;
+  text-align: left;
+}
+
+.day {
+  position: relative;
+  padding: 16px 20px;
+  margin-bottom: 14px;
+  border-radius: 14px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* TOOLTIP */
+.day::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%;
+  bottom: 115%;
+  transform: translateX(-50%);
+  background: #fff;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 0.85em;
+  white-space: nowrap;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.day:hover::after {
+  opacity: 1;
+}
+
+.day.unlocked {
+  background: #ffeef2;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.day.unlocked:hover {
+  transform: scale(1.02);
+}
+
+.lock {
+  font-size: 1.2em;
+}
+
+.footer {
+  margin-top: 28px;
+  font-size: 0.85em;
+  opacity: 0.7;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 35px;
+  border-radius: 18px;
+  max-width: 500px;
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.95);}
+  to {opacity: 1; transform: scale(1);}
+}
+</style>
+</head>
+
+<body>
+
+<!-- BACKGROUND MUSIC -->
+<audio autoplay loop>
+  <source src="Mere Samnewali Khidki Mein Happy Padosan 320 Kbps.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+
+  <h1>Hey Samriddhi… ❤️</h1>
+
+  <img src="samriddhi.jpg" alt="Samriddhi" class="photo">
+
+  <p>
+    I could’ve said everything at once.<br>
+    But where’s the fun in that?
+  </p>
+
+  <p>
+    Starting next week, this page will change every day,<br>
+    leading up to Valentine’s Day<br>
+    revealing little pieces of how I feel about you… slowly.
+  </p>
+
+  <p>
+    You might want to keep this link close 😌<br>
+    <strong>This is your warning—I’m not holding back next week.</strong>
+  </p>
+
+  <div class="timeline">
+
+    <div class="day" data-date="2026-02-07" data-key="rose" data-tooltip="A little something blooms here 🌹">
+      🌹 Rose Day <span class="lock">🔒</span>
+    </div>
+
+    <div class="day" data-date="2026-02-08" data-key="propose" data-tooltip="Some questions need the right moment 💍">
+      💍 Propose Day <span class="lock">🔒</span>
+    </div>
+
+    <div class="day" data-date="2026-02-09" data-key="chocolate" data-tooltip="Sweet things are waiting 🍫">
+      🍫 Chocolate Day <span class="lock">🔒</span>
+    </div>
+
+    <div class="day" data-date="2026-02-10" data-key="teddy" data-tooltip="Something warm and comforting 🧸">
+      🧸 Teddy Day <span class="lock">🔒</span>
+    </div>
+
+    <div class="day" data-date="2026-02-11" data-key="promise" data-tooltip="Words I don’t say lightly 🤞">
+      🤞 Promise Day <span class="lock">🔒</span>
+    </div>
+
+    <div class="day" data-date="2026-02-12" data-key="hug" data-tooltip="If only I could right now 🤗">
+      🤗 Hug Day <span class="lock">🔒</span>
+    </div>
+
+    <div class="day" data-date="2026-02-13" data-key="kiss" data-tooltip="This one might make you blush 😘">
+      😘 Kiss Day <span class="lock">🔒</span>
+    </div>
+
+    <div class="day" data-date="2026-02-14" data-key="valentine" data-tooltip="Everything leads here ❤️">
+      ❤️ Valentine’s Day <span class="lock">🔒</span>
+    </div>
+
+  </div>
+
+  <div class="footer">Next reveal coming soon…</div>
+</div>
+
+<div class="modal" id="modal">
+  <div class="modal-content" id="modalContent"></div>
+</div>
+
+<script>
+const today = new Date().toISOString().split('T')[0];
+const days = document.querySelectorAll('.day');
+const modal = document.getElementById('modal');
+const modalContent = document.getElementById('modalContent');
+
+const messages = {
+  rose: "🌹 Rose Day\n\nThis is where your first surprise blooms, Samriddhi.",
+  propose: "💍 Propose Day\n\nSome questions are worth waiting for.",
+  chocolate: "🍫 Chocolate Day\n\nSweet things, just like you.",
+  teddy: "🧸 Teddy Day\n\nSomething warm and comforting—just like my thoughts of you.",
+  promise: "🤞 Promise Day\n\nWords I mean. Always.",
+  hug: "🤗 Hug Day\n\nIf I could, I’d be holding you right now.",
+  kiss: "😘 Kiss Day\n\nThis one might make you blush.",
+  valentine: "❤️ Valentine’s Day\n\nEverything leads here."
+};
+
+days.forEach(day => {
+  if (today >= day.dataset.date) {
+    day.classList.add('unlocked');
+    day.querySelector('.lock').textContent = '❤️';
+    day.onclick = () => {
+      modalContent.innerText = messages[day.dataset.key];
+      modal.style.display = 'flex';
+    };
+  }
+});
+
+modal.onclick = () => modal.style.display = 'none';
+</script>
+
+</body>
+</html>
