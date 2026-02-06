@@ -125,6 +125,13 @@ p {
   animation: fadeIn 0.3s ease;
 }
 
+.modal-content img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 16px;
+  margin: 15px 0;
+}
+
 @keyframes fadeIn {
   from {opacity: 0; transform: scale(0.95);}
   to {opacity: 1; transform: scale(1);}
@@ -156,7 +163,7 @@ p {
     <strong>This is your warning—I’m not holding back next week.</strong>
   </p>
 
-  <!-- MUSIC BUTTON -->
+  <!-- BACKGROUND MUSIC BUTTON (UNCHANGED) -->
   <div style="margin: 20px 0;">
     <button id="musicBtn" style="padding: 10px 20px; border-radius: 12px; border:none; background:#ff6699; color:white; cursor:pointer;">
       Play Music 🎵
@@ -166,9 +173,14 @@ p {
     </audio>
   </div>
 
+  <!-- ROSE DAY SONG (NEW, HIDDEN) -->
+  <audio id="roseMusic">
+    <source src="gulabi_aankhen.mp3" type="audio/mpeg">
+  </audio>
+
   <div class="timeline">
 
-    <div class="day" data-date="2026-02-07" data-key="rose" data-tooltip="A little something blooms here 🌹">
+    <div class="day" data-date="2026-02-06" data-key="rose" data-tooltip="A little something blooms here 🌹">
       🌹 Rose Day <span class="lock">🔒</span>
     </div>
 
@@ -214,9 +226,19 @@ const today = new Date().toISOString().split('T')[0];
 const days = document.querySelectorAll('.day');
 const modal = document.getElementById('modal');
 const modalContent = document.getElementById('modalContent');
+const roseMusic = document.getElementById('roseMusic');
 
 const messages = {
-  rose: "🌹 Rose Day\n\nThis is where your first surprise blooms, Samriddhi.",
+  rose: `
+    <h2>🌹 Rose Day</h2>
+    <img src="rose_day.jpg" alt="Rose Day">
+    <p>
+      This rose isn’t just a flower.<br><br>
+      It’s a moment we shared,<br>
+      and the start of a week where I slowly let you see<br>
+      how special you are to me.
+    </p>
+  `,
   propose: "💍 Propose Day\n\nSome questions are worth waiting for.",
   chocolate: "🍫 Chocolate Day\n\nSweet things, just like you.",
   teddy: "🧸 Teddy Day\n\nSomething warm and comforting—just like my thoughts of you.",
@@ -226,21 +248,30 @@ const messages = {
   valentine: "❤️ Valentine’s Day\n\nEverything leads here."
 };
 
-// Unlock days based on date
 days.forEach(day => {
   if (today >= day.dataset.date) {
     day.classList.add('unlocked');
     day.querySelector('.lock').textContent = '❤️';
     day.onclick = () => {
-      modalContent.innerText = messages[day.dataset.key];
+
+      // ROSE DAY SPECIAL BEHAVIOR
+      if (day.dataset.key === "rose") {
+        roseMusic.currentTime = 0;
+        roseMusic.play();
+      }
+
+      modalContent.innerHTML = messages[day.dataset.key];
       modal.style.display = 'flex';
     };
   }
 });
 
-modal.onclick = () => modal.style.display = 'none';
+modal.onclick = () => {
+  modal.style.display = 'none';
+  roseMusic.pause();
+};
 
-// MUSIC BUTTON SCRIPT
+// MUSIC BUTTON SCRIPT (UNCHANGED)
 const music = document.getElementById('bgMusic');
 const musicBtn = document.getElementById('musicBtn');
 
