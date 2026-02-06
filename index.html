@@ -64,7 +64,6 @@ p {
   cursor: not-allowed;
 }
 
-/* TOOLTIP */
 .day::after {
   content: attr(data-tooltip);
   position: absolute;
@@ -106,7 +105,6 @@ p {
   opacity: 0.7;
 }
 
-/* MODAL */
 .modal {
   display: none;
   position: fixed;
@@ -143,82 +141,79 @@ p {
 
 <div class="container">
 
-  <h1>Hey Samriddhi… ❤️</h1>
+<h1>Hey Samriddhi… ❤️</h1>
 
-  <img src="samriddhi.jpg" alt="Samriddhi" class="photo">
+<img src="samriddhi.jpg" class="photo">
 
-  <p>
-    I could’ve said everything at once.<br>
-    But where’s the fun in that?
-  </p>
+<p>I could’ve said everything at once.<br>But where’s the fun in that?</p>
 
-  <p>
-    Starting next week, this page will change every day,<br>
-    leading up to Valentine’s Day<br>
-    revealing little pieces of how I feel about you… slowly.
-  </p>
+<p>
+Starting next week, this page will change every day,<br>
+leading up to Valentine’s Day<br>
+revealing little pieces of how I feel about you… slowly.
+</p>
 
-  <p>
-    You might want to keep this link close 😌<br>
-    <strong>This is your warning—I’m not holding back next week.</strong>
-  </p>
+<p>
+You might want to keep this link close 😌<br>
+<strong>This is your warning—I’m not holding back next week.</strong>
+</p>
 
-  <!-- BACKGROUND MUSIC BUTTON (UNCHANGED) -->
-  <div style="margin: 20px 0;">
-    <button id="musicBtn" style="padding: 10px 20px; border-radius: 12px; border:none; background:#ff6699; color:white; cursor:pointer;">
-      Play Music 🎵
-    </button>
-    <audio id="bgMusic" loop>
-      <source src="Mere Samnewali Khidki Mein Happy Padosan 320 Kbps.mp3" type="audio/mpeg">
-    </audio>
-  </div>
+<!-- BACKGROUND MUSIC -->
+<div style="margin:20px 0;">
+<button id="musicBtn" style="padding:10px 20px;border-radius:12px;border:none;background:#ff6699;color:white;cursor:pointer;">
+Play Music 🎵
+</button>
+<audio id="bgMusic" loop>
+<source src="Mere Samnewali Khidki Mein Happy Padosan 320 Kbps.mp3" type="audio/mpeg">
+</audio>
+</div>
 
-  <!-- ROSE DAY SONG (NEW, HIDDEN) -->
-  <audio id="roseMusic">
-    <source src="gulabi_aankhen.mp3" type="audio/mpeg">
-  </audio>
+<!-- ROSE DAY SONG -->
+<audio id="roseMusic">
+<source src="gulabi_aankhen.mp3" type="audio/mpeg">
+</audio>
 
-  <div class="timeline">
+<div class="timeline">
 
-    <div class="day" data-date="2026-02-06" data-key="rose" data-tooltip="A little something blooms here 🌹">
-      🌹 Rose Day <span class="lock">🔒</span>
-    </div>
+<div class="day" data-date="2026-02-01" data-key="rose" data-tooltip="A little something blooms here 🌹">
+🌹 Rose Day <span class="lock">🔒</span>
+</div>
 
-    <div class="day" data-date="2026-02-08" data-key="propose" data-tooltip="Some questions need the right moment 💍">
-      💍 Propose Day <span class="lock">🔒</span>
-    </div>
+<div class="day" data-date="2026-02-08" data-key="propose" data-tooltip="Some questions need the right moment 💍">
+💍 Propose Day <span class="lock">🔒</span>
+</div>
 
-    <div class="day" data-date="2026-02-09" data-key="chocolate" data-tooltip="Sweet things are waiting 🍫">
-      🍫 Chocolate Day <span class="lock">🔒</span>
-    </div>
+<div class="day" data-date="2026-02-09" data-key="chocolate" data-tooltip="Sweet things are waiting 🍫">
+🍫 Chocolate Day <span class="lock">🔒</span>
+</div>
 
-    <div class="day" data-date="2026-02-10" data-key="teddy" data-tooltip="Something warm and comforting 🧸">
-      🧸 Teddy Day <span class="lock">🔒</span>
-    </div>
+<div class="day" data-date="2026-02-10" data-key="teddy" data-tooltip="Something warm and comforting 🧸">
+🧸 Teddy Day <span class="lock">🔒</span>
+</div>
 
-    <div class="day" data-date="2026-02-11" data-key="promise" data-tooltip="Words I don’t say lightly 🤞">
-      🤞 Promise Day <span class="lock">🔒</span>
-    </div>
+<div class="day" data-date="2026-02-11" data-key="promise" data-tooltip="Words I don’t say lightly 🤞">
+🤞 Promise Day <span class="lock">🔒</span>
+</div>
 
-    <div class="day" data-date="2026-02-12" data-key="hug" data-tooltip="If only I could right now 🤗">
-      🤗 Hug Day <span class="lock">🔒</span>
-    </div>
+<div class="day" data-date="2026-02-12" data-key="hug" data-tooltip="If only I could right now 🤗">
+🤗 Hug Day <span class="lock">🔒</span>
+</div>
 
-    <div class="day" data-date="2026-02-13" data-key="kiss" data-tooltip="This one might make you blush 😘">
-      😘 Kiss Day <span class="lock">🔒</span>
-    </div>
+<div class="day" data-date="2026-02-13" data-key="kiss" data-tooltip="This one might make you blush 😘">
+😘 Kiss Day <span class="lock">🔒</span>
+</div>
 
-    <div class="day" data-date="2026-02-14" data-key="valentine" data-tooltip="Everything leads here ❤️">
-      ❤️ Valentine’s Day <span class="lock">🔒</span>
-    </div>
+<div class="day" data-date="2026-02-14" data-key="valentine" data-tooltip="Everything leads here ❤️">
+❤️ Valentine’s Day <span class="lock">🔒</span>
+</div>
 
-  </div>
+</div>
 
-  <div class="footer">Next reveal coming soon…</div>
+<div class="footer">Next reveal coming soon…</div>
 </div>
 
 <div class="modal" id="modal">
-  <div class="modal-content" id="modalContent"></div>
+<div class="modal-content" id="modalContent"></div>
 </div>
 
 <script>
@@ -226,63 +221,63 @@ const today = new Date().toISOString().split('T')[0];
 const days = document.querySelectorAll('.day');
 const modal = document.getElementById('modal');
 const modalContent = document.getElementById('modalContent');
-const roseMusic = document.getElementById('roseMusic');
 
 const messages = {
-  rose: `
-    <h2>🌹 Rose Day</h2>
-    <img src="rose_day.jpg" alt="Rose Day">
-    <p>
-      This rose isn’t just a flower.<br><br>
-      It’s a moment we shared,<br>
-      and the start of a week where I slowly let you see<br>
-      how special you are to me.
-    </p>
-  `,
-  propose: "💍 Propose Day\n\nSome questions are worth waiting for.",
-  chocolate: "🍫 Chocolate Day\n\nSweet things, just like you.",
-  teddy: "🧸 Teddy Day\n\nSomething warm and comforting—just like my thoughts of you.",
-  promise: "🤞 Promise Day\n\nWords I mean. Always.",
-  hug: "🤗 Hug Day\n\nIf I could, I’d be holding you right now.",
-  kiss: "😘 Kiss Day\n\nThis one might make you blush.",
-  valentine: "❤️ Valentine’s Day\n\nEverything leads here."
+rose: `
+<h2>🌹 Rose Day</h2>
+<img src="rose_day.jpg">
+<p>
+This rose isn’t just a flower.<br><br>
+It’s a moment we shared,<br>
+and the start of a week where I slowly let you see<br>
+how special you are to me.
+</p>
+<button onclick="playRoseSong()" style="padding:10px 18px;border-radius:14px;border:none;background:#ff5c8a;color:white;cursor:pointer;">
+▶ Play Gulabi Aankhen
+</button>
+`,
+propose:"💍 Propose Day\n\nSome questions are worth waiting for.",
+chocolate:"🍫 Chocolate Day\n\nSweet things, just like you.",
+teddy:"🧸 Teddy Day\n\nSomething warm and comforting—just like my thoughts of you.",
+promise:"🤞 Promise Day\n\nWords I mean. Always.",
+hug:"🤗 Hug Day\n\nIf I could, I’d be holding you right now.",
+kiss:"😘 Kiss Day\n\nThis one might make you blush.",
+valentine:"❤️ Valentine’s Day\n\nEverything leads here."
 };
 
-days.forEach(day => {
-  if (today >= day.dataset.date) {
-    day.classList.add('unlocked');
-    day.querySelector('.lock').textContent = '❤️';
-    day.onclick = () => {
-
-      // ROSE DAY SPECIAL BEHAVIOR
-      if (day.dataset.key === "rose") {
-        roseMusic.currentTime = 0;
-        roseMusic.play();
-      }
-
-      modalContent.innerHTML = messages[day.dataset.key];
-      modal.style.display = 'flex';
-    };
-  }
+days.forEach(day=>{
+if(today>=day.dataset.date){
+day.classList.add('unlocked');
+day.querySelector('.lock').textContent='❤️';
+day.onclick=()=>{
+modalContent.innerHTML=messages[day.dataset.key];
+modal.style.display='flex';
+};
+}
 });
 
-modal.onclick = () => {
-  modal.style.display = 'none';
-  roseMusic.pause();
+modal.onclick=()=>{
+modal.style.display='none';
+document.getElementById('roseMusic').pause();
 };
 
-// MUSIC BUTTON SCRIPT (UNCHANGED)
-const music = document.getElementById('bgMusic');
-const musicBtn = document.getElementById('musicBtn');
+function playRoseSong(){
+const song=document.getElementById('roseMusic');
+song.currentTime=0;
+song.play();
+}
 
-musicBtn.onclick = () => {
-  if (music.paused) {
-    music.play();
-    musicBtn.textContent = "Pause Music ⏸️";
-  } else {
-    music.pause();
-    musicBtn.textContent = "Play Music 🎵";
-  }
+const music=document.getElementById('bgMusic');
+const musicBtn=document.getElementById('musicBtn');
+
+musicBtn.onclick=()=>{
+if(music.paused){
+music.play();
+musicBtn.textContent="Pause Music ⏸️";
+}else{
+music.pause();
+musicBtn.textContent="Play Music 🎵";
+}
 };
 </script>
 
